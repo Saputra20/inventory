@@ -14,9 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $response = Http::get('http://localhost:3000');
-
-        return $response;
+        return view('dashboard.index');
     }
 
     /**
