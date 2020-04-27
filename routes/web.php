@@ -24,4 +24,10 @@ Route::group(['prefix' => '/' , 'middleware' => 'check' ], function () {
     //     // return view('welcome');
     // });
     Route::get('/dashboard', 'HomeController@index');
+    Route::resource('users', 'UserController');
+    Route::resource('items', 'ItemController');
+    Route::resource('category-items', 'CategoryItemController');
+    Route::get('error-page' , function(){
+        return view('error.offline');
+    });
 });
